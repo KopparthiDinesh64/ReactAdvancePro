@@ -1,0 +1,12 @@
+.carousel .slide {
+    background: none;
+  }
+  
+  .carousel .control-arrow {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .carousel .control-dots .dot {
+    background: white;
+  }
+  

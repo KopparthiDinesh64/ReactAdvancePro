@@ -1,0 +1,196 @@
+/* UserList.css */
+.title {
+    flex-grow: 1;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+  }
+  
+  .input {
+    flex: 1;
+  }
+  
+  .button {
+    margin-right: 10px;
+  }
+  
+  .split-button {
+    background-color: #ff6347;
+  }
+  
+  .user-list {
+    margin-top: 20px;
+  }
+  
+  .user-card {
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .profile-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .user-name {
+    flex: 1;
+  }
+  
+  .remove-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  
+  /* UserCard Component Styles */
+.user-card {
+    margin-bottom: 20px; /* Space between user cards */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+  }
+  
+  .card-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .profile-logo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .user-name {
+    flex: 1;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .remove-button {
+    margin-left: auto;
+  }
+  
+  /* Add Expenses Styles */
+  .input-container {
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    margin-bottom: 10px;
+  }
+  
+  .expense-card {
+    margin-bottom: 20px; /* Space between expense cards */
+    padding: 10px;
+    background-color: #e8f0fe;
+    border-radius: 8px;
+  }
+  
+  .expense-list {
+    margin-bottom: 20px; /* Space before the expense list */
+  }
+  
+  .button {
+    margin-right: 10px;
+  }
+
+  /* Container for Add Expenses inputs */
+.add-expenses-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between input elements */
+    width: 100%;
+    max-width: 600px; /* Maximum width for better alignment */
+    margin: 0 auto; /* Center align container */
+  }
+  
+  /* Styles for input fields */
+  .input-field {
+    width: 100%;
+  }
+  
+  /* Styles for dropdown */
+  .dropdown-container {
+    width: 100%;
+  }
+  
+  /* Styles for Add Expense button */
+  .add-expense-button {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  /* Styles for expense cards */
+  .expense-card {
+    margin-bottom: 20px; /* Space between expense cards */
+    padding: 15px;
+    background-color: #e8f0fe;
+    border-radius: 8px;
+  }
+  
+  /* Ensure spacing between cards */
+  .expenses {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  
+  /* Budget Splitting Styles */
+  .budget-splitting {
+    margin-top: 20px;
+  }
+  
+  .split-card {
+    margin-bottom: 20px; /* Space between split cards */
+    padding: 10px;
+    background-color: #d8e2dc;
+    border-radius: 8px;
+  }
+  
+  /* General Styling */
+  .content {
+    padding: 20px;
+  }
+  
+  hr {
+    border: 1px solid #bab7ad;
+  }
+  
+  .app-bar {
+    margin-bottom: 20px;
+  }
+  
+  .user-card, .input-container, .expense-card, .split-card {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  

@@ -1,0 +1,130 @@
+/* Container for draggable cards */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between the cards */
+  padding: 20px;
+}
+
+/* Style for individual cards */
+.card {
+  width: 100%; /* Full width based on the grid */
+  height: 250px; /* Fixed height */
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden; /* Ensure the image stays within the card's boundaries */
+}
+
+/* Style for the image within the card */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the card area */
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for the image */
+.card:hover img {
+  transform: rotateY(20deg) rotateX(20deg);
+}
+
+/* Hover effect for the card */
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+}
+
+/* Style for the text within the card */
+.card-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Text shadow for readability */
+}
+
+/* Style for the overlay that appears on card click */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  border-radius: 10px;
+}
+
+.overlay-content h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.overlay-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlay-content button:hover {
+  background-color: #0056b3;
+}

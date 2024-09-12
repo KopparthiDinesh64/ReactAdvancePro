@@ -1,0 +1,140 @@
+/* Ensure the carousel has relative positioning for absolute child positioning */
+.carousel .slider-wrapper {
+    position: relative; /* Allows absolute positioning of child elements */
+    overflow: visible;
+    padding: 0;
+    perspective: 1000px; /* Creates a 3D effect */
+}
+
+/* Adjust slide transitions and scaling */
+.carousel .slide {
+    transition: transform 0.5s ease-in-out;
+    transform: scale(0.7) translateZ(-300px); /* Places slides farther back */
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel .slide.selected {
+    transform: scale(1) translateZ(0); /* Brings the center slide forward */
+    z-index: 2;
+}
+
+.carousel .slide.prev-slide, .carousel .slide.next-slide {
+    transform: scale(0.8) translateZ(-150px); /* Adjust positioning for previous and next slides */
+    z-index: 1;
+}
+
+.carousel-card {
+    width: 300px; /* Adjust width for cards */
+    height: 150px; /* Adjust height as needed */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #807979; /* Ensure background is visible if images are transparent */
+}
+
+.card-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire card */
+}
+
+/* Arrow styling */
+.control-arrow {
+    background-color: rgba(0, 0, 0, 0.5); /* Background color of the arrows */
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex; /* Ensure the arrow is visible */
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Adjust font size for the arrows */
+    color: rgb(26, 23, 23); /* Arrow color */
+    cursor: pointer; /* Pointer cursor to indicate clickable */
+    position: absolute; /* Absolute positioning for exact placement */
+}
+
+/* Position the left and right arrows */
+.control-prev {
+    left: 10px; /* Adjust position from the left edge */
+}
+
+.control-next {
+    right: 10px; /* Adjust position from the right edge */
+}
+
+/* Container for the arrows, positioned below the carousel */
+.carousel .slider-wrapper {
+    position: relative;
+}
+
+
+.carousel .control-arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    opacity: 0.7;
+    position: relative; /* Changed from absolute to relative */
+    z-index: 3;
+    cursor: pointer;
+    display: inline-block; /* Allow them to sit side by side */
+    margin: 10px 20px; /* Space them out from each other and the carousel */
+}
+
+/* Container for the arrows, positioned below the carousel */
+.carousel .control-arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -90px;
+    margin-top: 90px; /* Space between the carousel and the arrows */
+    transform: translateY(-120%);
+}
+
+.control-arrow .control-prev{
+    background-color: rgba(206, 206, 205, 0.502);
+}
+/* Optional: Increase opacity on hover */
+
+
+
+/* Optional: Increase opacity on hover */
+.carousel .control-arrow:hover {
+    opacity: 1;
+}
+
+/* Card overlay styling */
+.carousel-card {
+    position: relative;
+}
+
+.card-content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.overlay-text {
+    margin-bottom: 8px;
+}
+
+.overlay-link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.overlay-link:hover {
+    text-decoration: underline;
+}
